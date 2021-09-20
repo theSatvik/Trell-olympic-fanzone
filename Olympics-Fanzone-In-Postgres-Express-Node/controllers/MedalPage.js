@@ -22,7 +22,7 @@ async function UpdateMedalTally(req, res){
         const {COUNTRY, MEDALTYPE, ADDNEWMEDAL} = req.body;
     
         let UpdatedRecords = await SchedulePageDB.query(` UPDATE MedalPage
-        SET  ${MEDALTYPE} +=  ADDNEWMEDAL
+        SET  ${MEDALTYPE} +=  ${ADDNEWMEDAL}
         WHERE COUNTRY = ${COUNTRY} AND MEDALTYPE = ${MEDALTYPE}; `);
         
         UpdatedRecords = UpdatedRecords.rows;

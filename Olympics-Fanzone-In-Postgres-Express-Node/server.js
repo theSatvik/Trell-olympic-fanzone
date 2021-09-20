@@ -23,7 +23,7 @@ app.get('/schedulePage', SchedulePage.scheduleAllEvents , (req, res) => { });
 app.get('/schedulePage/filter', SchedulePage.filteredSchedule , (req, res) => { });
 
 
-app.get('/schedulePage/filter', SchedulePage.liveSchedule , (req, res) => { });
+app.get('/schedulePage/live', SchedulePage.liveSchedule , (req, res) => { });
 
 
 //Medal Page 
